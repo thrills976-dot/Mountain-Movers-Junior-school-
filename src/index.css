@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+    --font-heading: 'Fredoka', sans-serif;
+    --font-sans: 'Nunito', sans-serif;
+    --color-primary: #003A70;
+    --color-primary-foreground: #ffffff;
+    --color-secondary: #FDB714;
+    --color-secondary-foreground: #003A70;
+    --color-muted: #E0F0FF;
+    --color-muted-foreground: #4A5568;
+    --color-accent: #FDB714;
+    --color-accent-foreground: #003A70;
+    --color-background: #ffffff;
+    --color-foreground: #003A70;
+    --color-card: #ffffff;
+    --color-card-foreground: #003A70;
+    --color-popover: #ffffff;
+    --color-popover-foreground: #003A70;
+    --color-border: #E0F0FF;
+    --color-input: #E0F0FF;
+    --color-ring: #FDB714;
+    --radius-sm: 0.5rem;
+    --radius-md: 0.75rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-2xl: 2rem;
+    --radius-3xl: 2.5rem;
+    --radius-4xl: 3rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    }
+  body {
+    @apply bg-background text-foreground font-sans;
+    }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+    }
+}
