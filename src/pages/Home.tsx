@@ -42,18 +42,11 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section id="home" className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={IMAGES.HERO} 
-            alt="Students learning" 
-            className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/30"></div>
-        </div>
+      <section id="home" className="relative h-screen min-h-[700px] flex items-center overflow-hidden bg-gradient-to-br from-muted via-white to-secondary/20">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-primary/5 skew-x-12 translate-x-1/4"></div>
+        <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-secondary/10 rounded-tr-full blur-3xl"></div>
         
-        <div className="container mx-auto px-6 relative z-10 text-white">
+        <div className="container mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -63,19 +56,25 @@ export default function Home() {
             <span className="inline-block px-4 py-1 bg-secondary text-secondary-foreground rounded-full text-sm font-bold mb-6 tracking-wider uppercase shadow-sm">
               Enrollment Open for 2026
             </span>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] drop-shadow-md">
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-[1.1] text-primary">
               Empowering and <br />
-              <span className="text-secondary">Equipping Them Young.</span>
+              <span className="text-secondary drop-shadow-sm">Equipping Them Young.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-slate-100 mb-10 leading-relaxed font-light drop-shadow-md">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-10 leading-relaxed font-medium">
               Welcome to Mountain Movers Junior School. We are dedicated to nurturing young minds through quality education, strong values and a caring learning environment. Our goal is to help every child grow in knowledge, confidence and character so they can achieve it.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-7 font-bold shadow-lg">
-                <a href="#admissions">Enroll Your Child Now</a>
+              <Button asChild size="lg" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground text-lg px-8 py-7 font-bold shadow-lg cursor-pointer" onClick={() => {
+                const element = document.getElementById('admissions');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }}>
+                <span>Enroll Your Child Now</span>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-white/80 text-white hover:bg-white/10 hover:border-white text-lg px-8 py-7 backdrop-blur-sm shadow-lg">
-                <a href="#contact">Book a School Visit</a>
+              <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/5 text-lg px-8 py-7 shadow-sm cursor-pointer" onClick={() => {
+                const element = document.getElementById('contact');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }}>
+                <span>Book a School Visit</span>
               </Button>
             </div>
           </motion.div>

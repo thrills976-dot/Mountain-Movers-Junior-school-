@@ -12,13 +12,13 @@ export const IMAGES = {
   LOGO: "/images/logo.png",
 
   // Hero Section
-  HERO: "/images/hero.jpg",
+  HERO: "/images/our%20school.jpg",
   
   // About Page
-  ABOUT_STORY: "/images/about.jpg",
+  ABOUT_STORY: "/images/our%20school.jpg",
   
   // Academics Page
-  ACADEMICS_PHILOSOPHY: "/images/academics.jpg",
+  ACADEMICS_PHILOSOPHY: "/images/curriculum1.jpg",
   
   // Home Page Sections
   PROGRAMS_1: "/images/curriculum1.jpg",

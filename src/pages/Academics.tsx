@@ -53,7 +53,7 @@ export default function Academics({ isEmbedded = false }: { isEmbedded?: boolean
           ))}
         </div>
 
-        <div className="bg-primary text-white rounded-3xl p-12 overflow-hidden relative">
+        <div className="bg-primary text-white rounded-3xl p-12 overflow-hidden relative mb-24">
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold mb-6">Our Teaching Philosophy</h2>
@@ -83,6 +83,29 @@ export default function Academics({ isEmbedded = false }: { isEmbedded?: boolean
             <div className="hidden lg:block">
               <img src={IMAGES.ACADEMICS_PHILOSOPHY} alt="Learning" className="rounded-xl shadow-2xl" referrerPolicy="no-referrer" />
             </div>
+          </div>
+        </div>
+
+        {/* Curriculum Images Section */}
+        <div className="max-w-4xl mx-auto text-center mb-12">
+          <h2 className="text-4xl font-bold text-primary mb-6">Our Curriculum in Action</h2>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="rounded-3xl overflow-hidden shadow-xl aspect-[4/3]">
+            <img 
+              src={IMAGES.PROGRAMS_1} 
+              alt="Curriculum 1" 
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+              referrerPolicy="no-referrer" 
+            />
+          </div>
+          <div className="rounded-3xl overflow-hidden shadow-xl aspect-[4/3]">
+            <img 
+              src={IMAGES.PROGRAMS_2} 
+              alt="Curriculum 2" 
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+              referrerPolicy="no-referrer" 
+            />
           </div>
         </div>
       </div>
